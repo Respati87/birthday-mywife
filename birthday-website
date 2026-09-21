@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09070d">
+  <title>Untuk Kamu ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- BACKSOUND -->
+  <audio id="backgroundMusic" loop>
+    <source src="audio/backsound.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- MUSIC BUTTON -->
+  <button id="musicButton" class="music-button" onclick="toggleMusic()" aria-label="Musik">
+    🎵
+  </button>
+
+  <main>
+
+    <!-- 1. OPENING -->
+    <section class="scene active" id="scene1">
+      <div class="opening-content">
+        <div class="small-heart">♥</div>
+
+        <p class="eyebrow">A little something for you</p>
+
+        <h1>Untuk kamu. ❤️</h1>
+
+        <p>
+          Ada sesuatu yang Mas siapkan khusus buat kamu.
+        </p>
+
+        <p>
+          Sebelum mulai...
+        </p>
+
+        <p>
+          Naikkan volume HP Adek sedikit. 🔊
+        </p>
+
+        <p>
+          Kalau ada earphone, dipakai ya sayang.
+        </p>
+
+        <button class="primary-button" onclick="startExperience()">
+          Buka pelan-pelan ❤️
+        </button>
+      </div>
+    </section>
+
+
+    <!-- 2. HAPPY BIRTHDAY -->
+    <section class="scene" id="scene2">
+      <div class="content">
+        <p class="eyebrow">Today is about you</p>
+
+        <h2>Happy Birthday, sayang. 🎂</h2>
+
+        <div class="romantic-card">
+          <p>
+            Hari ini bukan cuma tentang bertambahnya usia kamu.
+          </p>
+
+          <p>
+            Hari ini adalah hari ketika seseorang yang sangat penting
+            dalam hidup Mas lahir ke dunia.
+          </p>
+
+          <p>
+            Mas mungkin belum bisa berada tepat di samping kamu
+            untuk merayakan hari ini.
+          </p>
+
+          <p>
+            Tapi Mas ingin tetap menemani kamu,
+            walaupun kali ini lewat sesuatu yang sederhana.
+          </p>
+
+          <p>
+            Jadi, baca semuanya pelan-pelan ya. ❤️
+          </p>
+        </div>
+
+        <button class="primary-button" onclick="nextScene()">
+          Masih ada lanjutannya...
+        </button>
+      </div>
+    </section>
+
+
+    <!-- 3. FOTO KITA -->
+    <section class="scene" id="scene3">
+      <div class="content wide">
+
+        <p class="eyebrow">Our little memories</p>
+
+        <h2>Foto Kita 📸</h2>
+
+        <p class="intro">
+          Mas masih ingin mengingat banyak hal kecil yang pernah kita lewati.
+        </p>
+
+        <div class="photo-grid">
+
+          <div class="polaroid">
+            <img src="images/foto1.jpg" alt="Foto kita 1">
+            <p>Mas masih ingat momen ini.</p>
+          </div>
+
+          <div class="polaroid">
+            <img src="images/foto2.jpg" alt="Foto kita 2">
+            <p>Kelihatannya sederhana, tapi sampai sekarang masih Mas ingat.</p>
+          </div>
+
+          <div class="polaroid">
+            <img src="images/foto3.jpg" alt="Foto kita 3">
+            <p>Kalau melihat foto ini, Mas masih bisa senyum sendiri.</p>
+          </div>
+
+          <div class="polaroid">
+            <img src="images/foto4.jpg" alt="Foto kita 4">
+            <p>Ternyata kita sudah melewati banyak hal ya.</p>
+          </div>
+
+          <div class="polaroid">
+            <img src="images/foto5.jpg" alt="Foto kita 5">
+            <p>Mas masih ingin punya banyak foto seperti ini bersama kamu.</p>
+          </div>
+
+          <div class="polaroid">
+            <img src="images/foto6.jpg" alt="Foto kita 6">
+            <p>Satu lagi kenangan yang Mas simpan baik-baik. ❤️</p>
+          </div>
+
+        </div>
+
+        <div class="question-card">
+          <h3>Kalau Mas menyuruh kamu memilih satu foto kita yang paling kamu suka...</h3>
+
+          <p>Kamu pilih yang mana?</p>
+
+          <div class="choice-grid">
+
+            <button onclick="photoChoice(1)">Foto 1 ❤️</button>
+            <button onclick="photoChoice(2)">Foto 2 ❤️</button>
+            <button onclick="photoChoice(3)">Foto 3 ❤️</button>
+            <button onclick="photoChoice(4)">Foto 4 ❤️</button>
+            <button onclick="photoChoice(5)">Foto 5 ❤️</button>
+            <button onclick="photoChoice(6)">Foto 6 ❤️</button>
+
+          </div>
+
+          <div id="photoResponse" class="response"></div>
+        </div>
+
+        <button id="photoNext" class="primary-button hidden" onclick="nextScene()">
+          Lanjut ❤️
+        </button>
+
+      </div>
+    </section>
+
+
+    <!-- 4. KITA SUDAH SEJAUH INI -->
+    <section class="scene" id="scene4">
+      <div class="content">
+
+        <p class="eyebrow">Our journey</p>
+
+        <h2>Kita Sudah Sejauh Ini</h2>
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <span>Dulu</span>
+            <p>
+              Awalnya Mas tidak pernah tahu kalau pertemuan dengan kamu
+              akan membawa Mas sejauh ini.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <span>Kemudian</span>
+            <p>
+              Pelan-pelan kita mulai saling mengenal.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <span>Setelah itu</span>
+            <p>
+              Hari-hari yang tadinya biasa mulai punya cerita.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <span>Sampai sekarang</span>
+            <p>
+              Dan ternyata kita sudah sampai sejauh ini.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="quote-card">
+          Mas tidak cuma ingin mengingat berapa lama kita bersama.
+          Mas ingin mengingat berapa banyak hal yang sudah kita lewati bersama.
+        </div>
+
+        <button class="primary-button" onclick="nextScene()">
+          Lanjut ❤️
+        </button>
+
+      </div>
+    </section>
+
+
+    <!-- 5. SEBERAPA BESAR MAS MENCINTAIMU -->
+    <section class="scene" id="scene5">
+      <div class="content">
+
+        <p class="eyebrow">One question</p>
+
+        <h2>Seberapa Besar Mas Mencintaimu?</h2>
+
+        <p>
+          Mas mau kasih kamu satu pertanyaan.
+        </p>
+
+        <p>
+          Menurut kamu, seberapa besar Mas sayang sama kamu?
+        </p>
+
+        <div class="choice-grid">
+
+          <button onclick="loveChoice('10%')">10%</button>
+          <button onclick="loveChoice('50%')">50%</button>
+          <button onclick="loveChoice('100%')">100%</button>
+          <button onclick="loveChoice('∞%')">∞%</button>
+
+        </div>
+
+        <div id="loveResponse" class="response"></div>
+
+        <button id="loveNext" class="primary-button hidden" onclick="nextScene()">
+          Lanjut ❤️
+        </button>
+
+      </div>
+    </section>
+
+
+    <!-- 6. QUIZ ROMANTIS -->
+    <section class="scene" id="scene6">
+      <div class="content">
+
+        <p class="eyebrow">A little quiz</p>
+
+        <h2>Quiz Romantis Pertama 💕</h2>
+
+        <p>
+          Sekarang Mas mau tahu sesuatu.
+        </p>
+
+        <h3>
+          Kalau sekarang Mas tiba-tiba muncul di depan kamu,
+          apa yang pertama kali kamu lakukan?
+        </h3>
+
+        <div class="choice-grid">
+
+          <button onclick="surpriseChoice('peluk')">
+            Peluk Mas ❤️
+          </button>
+
+          <button onclick="surpriseChoice('marah')">
+            Marah karena Mas nggak bilang 😤
+          </button>
+
+          <button onclick="surpriseChoice('nangis')">
+            Nangis 🥹
+          </button>
+
+          <button onclick="surpriseChoice('senyum')">
+            Senyum lalu peluk 😊
+          </button>
+
+        </div>
+
+        <div id="surpriseResponse" class="response"></div>
+
+        <button id="surpriseNext" class="primary-button hidden" onclick="nextScene()">
+          Masih ada satu lagi...
+        </button>
+
+      </div>
+    </section>
+
+
+    <!-- 7. JEBAKAN ROMANTIS -->
+    <section class="scene" id="scene7">
+      <div class="content">
+
+        <p class="eyebrow">Careful 😂</p>
+
+        <h2>Jebakan Romantis</h2>
+
+        <p>Jangan sampai salah 😂</p>
+
+        <h3>
+          Menurut kamu, siapa yang lebih sayang?
+        </h3>
+
+        <div class="choice-grid">
+
+          <button onclick="whoChoice('Mas')">Mas ❤️</button>
+          <button onclick="whoChoice('Kamu')">Kamu ❤️</button>
+          <button onclick="whoChoice('Sama-sama')">Sama-sama ❤️</button>
+
+        </div>
+
+        <div id="whoResponse" class="response"></div>
+
+        <button id="whoNext" class="primary-button hidden" onclick="nextScene()">
+          Lanjut ❤️
+        </button>
+
+      </div>
+    </section>
+
+
+    <!-- 8. PILIHAN TENTANG MAS -->
+    <section class="scene" id="scene8">
+      <div class="content">
+
+        <p class="eyebrow">If we could go anywhere</p>
+
+        <h2>Pilihan Tentang Mas</h2>
+
+        <h3>
+          Kalau Mas ngajak kamu pergi sekarang, kamu pilih apa?
+        </h3>
+
+        <div class="choice-grid">
+
+          <button onclick="placeChoice('Pantai')">
+            Pantai 🏖️
+          </button>
+
+          <button onclick="placeChoice('Gunung')">
+            Gunung 🏔️
+          </button>
+
+          <button onclick="placeChoice('Jalan-jalan')">
+            Jalan-jalan 🏙️
+          </button>
+
+          <button onclick="placeChoice('Rumah')">
+            Di rumah berdua 🏠
+          </button>
+
+        </div>
+
+        <div id="placeResponse" class="response"></div>
+
+        <button id="placeNext" class="primary-button hidden" onclick="nextScene()">
+          Lanjut ❤️
+        </button>
+
+      </div>
+    </section>
+
+
+    <!-- 9. MAKE A WISH -->
+    <section class="scene wish-scene" id="scene9">
+      <div class="content">
+
+        <p class="eyebrow">Make a wish</p>
+
+        <h2>✨ Make a Wish ✨</h2>
+
+        <div class="cake">
+
+          <div class="candle">
+            <div class="flame" id="flame"></div>
+          </div>
+
+          <div class="cake-top"></div>
+          <div class="cake-body"></div>
+
+        </div>
+
+        <p>
+          Sekarang berhenti sebentar.
+        </p>
+
+        <p>
+          Tarik napas pelan-pelan.
+        </p>
+
+        <p>
+          Pejamkan mata.
+        </p>
+
+        <p>
+          Pikirkan satu hal yang paling kamu inginkan
+          di umur baru kamu.
+        </p>
+
+        <button class="wish-button" onclick="makeWish()">
+          ✨ MAKE A WISH
+        </button>
+
+        <div id="wishResult" class="wish-result"></div>
+
+      </div>
+    </section>
+
+
+    <!-- 10. TULIS HARAPAN -->
+    <section class="scene" id="scene10">
+      <div class="content">
+
+        <p class="eyebrow">Something from your heart</p>
+
+        <h2>Tulis Harapanmu ✍️</h2>
+
+        <p>
+          Sekarang Mas mau minta satu hal.
+        </p>
+
+        <p>
+          Tulis satu harapan kamu untuk umur yang baru.
+        </p>
+
+        <textarea
+          id="wishText"
+          placeholder="Tulis harapanmu di sini..."
+          maxlength="1000"
+        ></textarea>
+
+        <button class="primary-button" onclick="submitWish()">
+          Mas ingin membaca harapanmu ❤️
+        </button>
+
+        <div id="wishSubmitResult" class="response"></div>
+
+        <button id="wishNext" class="primary-button hidden" onclick="nextScene()">
+          Lanjut ❤️
+        </button>
+
+      </div>
+    </section>
+
+
+    <!-- 11. PERTANYAAN -->
+    <section class="scene" id="scene11">
+      <div class="content">
+
+        <p class="eyebrow">From Mas to you</p>
+
+        <h2>Ada Beberapa Hal yang Mas Ingin Tahu 💌</h2>
+
+        <div class="question-form">
+
+          <label>
+            Hal apa yang paling kamu suka dari Mas?
+          </label>
+
+          <textarea
+            id="answer1"
+            placeholder="Tulis jawaban kamu..."
+          ></textarea>
+
+
+          <label>
+            Menurut kamu, apa yang membuat kita masih bertahan sampai sekarang?
+          </label>
+
+          <textarea
+            id="answer2"
+            placeholder="Tulis jawaban kamu..."
+          ></textarea>
+
+
+          <label>
+            Kalau suatu hari jarak ini sudah nggak ada,
+            hal pertama yang ingin kamu lakukan bersama Mas apa?
+          </label>
+
+          <textarea
+            id="answer3"
+            placeholder="Tulis jawaban kamu..."
+          ></textarea>
+
+
+          <label>
+            Kalau kamu bisa mengatakan satu hal kepada Mas sekarang,
+            apa yang ingin kamu bilang?
+          </label>
+
+          <textarea
+            id="answer4"
+            placeholder="Tulis jawaban kamu..."
+          ></textarea>
+
+        </div>
+
+        <button class="primary-button" onclick="submitAnswers()">
+          Mas sudah membaca ❤️
+        </button>
+
+        <div id="answersResult" class="response"></div>
+
+        <button id="answersNext" class="primary-button hidden" onclick="nextScene()">
+          Lanjut ❤️
+        </button>
+
+      </div>
+    </section>
+
+
+    <!-- 12. LDR -->
+    <section class="scene" id="scene12">
+      <div class="content">
+
+        <p class="eyebrow">About us</p>
+
+        <h2>Tentang Jarak Kita</h2>
+
+        <div class="distance-card">
+
+          <p>
+            Ada satu hal yang sampai sekarang masih Mas nggak suka.
+          </p>
+
+          <h3>Jarak.</h3>
+
+          <p>Beda tempat.</p>
+
+          <p>Beda pulau.</p>
+
+          <p>Kadang bahkan beda waktu.</p>
+
+          <p>
+            Ada saat ketika Mas ingin melihat kamu,
+            tapi yang bisa Mas lakukan hanya melihat layar.
+          </p>
+
+          <p>
+            Tapi dari jarak ini Mas belajar sesuatu.
+          </p>
+
+          <p>
+            Bahwa sayang bukan cuma tentang seberapa sering kita bertemu.
+          </p>
+
+          <p>
+            Tapi tentang tetap memilih orang yang sama
+            meskipun sedang tidak berada di tempat yang sama.
+          </p>
+
+        </div>
+
+        <button class="primary-button" onclick="nextScene()">
+          Lanjut ❤️
+        </button>
+
+      </div>
+    </section>
+
+
+    <!-- 13. KALAU NANTI BERTEMU -->
+    <section class="scene" id="scene13">
+      <div class="content">
+
+        <p class="eyebrow">Someday</p>
+
+        <h2>Kalau Nanti Kita Bertemu</h2>
+
+        <p>
+          Sekarang bayangkan suatu hari nanti
+          Mas tiba-tiba berdiri di depan kamu.
+        </p>
+
+        <div class="choice-grid">
+
+          <button onclick="meetChoice('Peluk Mas dulu ❤️')">
+            Peluk Mas dulu ❤️
+          </button>
+
+          <button onclick="meetChoice('Makan bersama 🍜')">
+            Makan bersama 🍜
+          </button>
+
+          <button onclick="meetChoice('Jalan-jalan 🌃')">
+            Jalan-jalan 🌃
+          </button>
+
+          <button onclick="meetChoice('Ngobrol sampai malam 💬')">
+            Ngobrol sampai malam 💬
+          </button>
+
+        </div>
+
+        <div id="meetResponse" class="response"></div>
+
+        <button id="meetNext" class="primary-button hidden" onclick="nextScene()">
+          Lanjut ❤️
+        </button>
+
+      </div>
+    </section>
+
+
+    <!-- 14. SURAT -->
+    <section class="scene" id="scene14">
+      <div class="content">
+
+        <p class="eyebrow">A letter from Mas</p>
+
+        <h2>Surat Mas Untuk Kamu 💌</h2>
+
+        <div class="letter">
+
+          <p>
+            Untuk kamu yang hari ini bertambah usia...
+          </p>
+
+          <p>
+            Selamat ulang tahun, sayang.
+          </p>
+
+          <p>
+            Mas ingin berterima kasih untuk semua hal
+            yang sudah kamu berikan selama ini.
+          </p>
+
+          <p>
+            Terima kasih karena sudah menjadi seseorang
+            yang menemani banyak bagian dalam hidup Mas.
+          </p>
+
+          <p>
+            Mas tahu Mas bukan seseorang yang sempurna.
+          </p>
+
+          <p>
+            Mas masih punya banyak kekurangan.
+            Ada saatnya Mas salah bicara,
+            ada saatnya Mas kurang peka,
+            ada saatnya Mas mungkin membuat kamu kecewa.
+          </p>
+
+          <p>
+            Untuk semua itu, Mas minta maaf.
+          </p>
+
+          <p>
+            Tapi di balik semua kekurangan itu,
+            Mas selalu punya satu keinginan:
+            Mas ingin terus menjadi seseorang
+            yang bisa kamu percaya.
+          </p>
+
+          <p>
+            Mas ingin terus belajar menjadi lebih baik.
+            Bukan hanya untuk Mas sendiri,
+            tapi juga untuk masa depan yang suatu hari nanti
+            ingin Mas bangun bersama kamu.
+          </p>
+
+          <p>
+            Mas tidak tahu kehidupan kita nanti akan seperti apa.
+          </p>
+
+          <p>
+            Mas tidak tahu apa saja yang akan berubah.
+          </p>
+
+          <p>
+            Tapi Mas berharap, di antara banyak hal
+            yang berubah nanti,
+            kita masih menjadi dua orang
+            yang saling memilih.
+          </p>
+
+          <p>
+            Dan kalau suatu hari nanti kita melihat kembali
+            semua perjalanan ini,
+            Mas ingin kita tersenyum dan berkata:
+          </p>
+
+          <blockquote>
+            “Ternyata kita berhasil melewati semuanya.”
+          </blockquote>
+
+          <p>
+            ❤️
+          </p>
+
+        </div>
+
+        <button class="primary-button" onclick="nextScene()">
+          Lanjut ❤️
+        </button>
+
+      </div>
+    </section>
+
+
+    <!-- 15. SEBERAPA KENAL -->
+    <section class="scene" id="scene15">
+      <div class="content">
+
+        <p class="eyebrow">Do you know Mas?</p>
+
+        <h2>Seberapa Kenal Kamu Sama Mas?</h2>
+
+        <div class="mini-question">
+
+          <h3>
+            Kalau Mas lagi bingung, biasanya Mas lebih suka...
+          </h3>
+
+          <div class="choice-grid">
+
+            <button onclick="knowChoice(1, 'Diam dulu')">
+              Diam dulu
+            </button>
+
+            <button onclick="knowChoice(1, 'Banyak cerita')">
+              Banyak cerita
+            </button>
+
+            <button onclick="knowChoice(1, 'Cari makanan')">
+              Cari makanan
+            </button>
+
+            <button onclick="knowChoice(1, 'Bilang nggak apa-apa')">
+              Bilang "nggak apa-apa"
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="mini-question">
+
+          <h3>
+            Kalau Mas lagi capek,
+            yang paling Mas butuhkan biasanya...
+          </h3>
+
+          <div class="choice-grid">
+
+            <button onclick="knowChoice(2, 'Istirahat')">
+              Istirahat
+            </button>
+
+            <button onclick="knowChoice(2, 'Makan')">
+              Makan
+            </button>
+
+            <button onclick="knowChoice(2, 'Teman cerita')">
+              Teman cerita
+            </button>
+
+            <button onclick="knowChoice(2, 'Semua benar')">
+              Semua benar
+            </button>
+
+          </div>
+
+        </div>
+
+        <div id="knowResponse" class="response"></div>
+
+        <button id="knowNext" class="primary-button hidden" onclick="nextScene()">
+          Lanjut ❤️
+        </button>
+
+      </div>
+    </section>
+
+
+    <!-- 16. MASA DEPAN -->
+    <section class="scene" id="scene16">
+      <div class="content">
+
+        <p class="eyebrow">Our future</p>
+
+        <h2>Masa Depan Kita</h2>
+
+        <div class="future-card">
+
+          <p>
+            Mas nggak tahu persis seperti apa hidup kita
+            beberapa tahun lagi.
+          </p>
+
+          <p>
+            Mas nggak tahu kita akan tinggal di mana.
+          </p>
+
+          <p>
+            Mas nggak tahu apa saja yang akan berubah.
+          </p>
+
+          <p>
+            Tapi ada satu hal yang Mas tahu.
+          </p>
+
+          <h3>
+            Mas ingin kamu ada di dalam cerita itu.
+          </h3>
+
+          <p>
+            Kalau kamu masih mau...
+          </p>
+
+          <h3>
+            Mas ingin terus berjalan bersama kamu.
+          </h3>
+
+        </div>
+
+        <button class="primary-button" onclick="nextScene()">
+          Lanjut ❤️
+        </button>
+
+      </div>
+    </section>
+
+
+    <!-- 17. PERTANYAAN TERAKHIR -->
+    <section class="scene" id="scene17">
+      <div class="content">
+
+        <p class="eyebrow">One last question</p>
+
+        <h2>Pertanyaan Terakhir ❤️</h2>
+
+        <p>
+          Sebelum kamu pergi...
+        </p>
+
+        <p>
+          Mas punya satu pertanyaan terakhir.
+        </p>
+
+        <h3 class="big-question">
+          Maukah kamu tetap berjalan bersama Mas?
+        </h3>
+
+        <div class="final-buttons">
+
+          <button class="yes-button" onclick="finalYes()">
+            ❤️ MAU
+          </button>
+
+          <button
+            class="no-button"
+            id="noButton"
+            onclick="finalNo()"
+          >
+            Tidak
+          </button>
+
+        </div>
+
+        <div id="finalNoResponse" class="response"></div>
+
+      </div>
+    </section>
+
+
+    <!-- 18. ENDING -->
+    <section class="scene final-scene" id="scene18">
+
+      <div class="final-hearts">
+        ❤️ ✨ ❤️ ✨ ❤️
+      </div>
+
+      <div class="content">
+
+        <div class="final-photo">
+          <img src="images/foto6.jpg" alt="Foto kita">
+        </div>
+
+        <p class="eyebrow">The end... or maybe the beginning</p>
+
+        <h2>Happy Birthday, calon istriku. ❤️</h2>
+
+        <div class="ending-letter">
+
+          <p>
+            Semoga umur baru ini membawa kamu
+            ke tempat-tempat yang selama ini kamu impikan.
+          </p>
+
+          <p>
+            Semoga semua usaha kamu perlahan menemukan hasilnya.
+          </p>
+
+          <p>
+            Semoga semua yang kamu doakan menemukan jalannya.
+          </p>
+
+          <p>
+            Semoga ketika kamu merasa lelah,
+            kamu selalu ingat bahwa ada seseorang
+            yang percaya sama kamu.
+          </p>
+
+          <p class="signature">
+            Mas.
+          </p>
+
+          <p>
+            Terima kasih sudah lahir ke dunia.
+          </p>
+
+          <p>
+            Karena kalau kamu tidak pernah lahir,
+            Mas tidak akan pernah punya kesempatan
+            untuk mengenal kamu,
+            menyayangi kamu,
+            dan mencintai kamu.
+          </p>
+
+          <p>
+            Mas nggak tahu berapa banyak ulang tahun
+            yang akan kita lewati nanti.
+          </p>
+
+          <p>
+            Tapi Mas berharap...
+          </p>
+
+          <h3>
+            sebanyak mungkin di antaranya
+            bisa Mas rayakan bersama kamu.
+          </h3>
+
+          <p class="love-ending">
+            I love you, always. ❤️
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- HIDDEN FORM TARGET -->
+  <iframe name="submitFrame" id="submitFrame" style="display:none;"></iframe>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
